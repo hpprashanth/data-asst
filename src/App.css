@@ -1,0 +1,56 @@
+/* Global overrides */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb; /* light gray */
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+nav {
+  position: relative;
+  z-index: 20;
+}
+
+nav a {
+  transition: color 0.2s ease-in-out;
+}
+
+/* Mobile Menu */
+nav .mobile-menu {
+  animation: slideDown 0.3s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sections */
+section > div {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section > div:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Checkbox Component */
+.nested-checkbox label {
+  cursor: pointer;
+ /* user-select: none;*/
+}
+
+.nested-checkbox input[type="checkbox"] {
+  accent-color: #2563eb; 
+  width: 1.1rem;
+  height: 1.1rem;
+  cursor: pointer;
+}
